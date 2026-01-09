@@ -1,0 +1,82 @@
+<div class="filter">
+  <button class="filter__open btn-reset">
+    <span class="text">
+      Фильтры
+      <span class="count">
+        3
+      </span>
+    </span>
+    <span class="svg">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <use xlink:href="img/sprite.svg#filterOpen"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="filter__wrapper">
+    <div class="filter__wrapper-top">
+      <div class="filter__hidden-top">
+        <button class="filter__btn-back btn-reset">
+          <span class="svg">
+            <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownFilterBack"></use>
+            </svg>
+          </span>
+          <span class="text">
+            Вернуться назад
+          </span>
+        </button>
+
+        <div class="filter__line-title">
+          <h3 class="filter__title">
+            Фильтры
+          </h3>
+        </div>
+      </div>
+
+      <form>
+        <div class="filter__list">
+          <div class="filter__item">
+            @@include('../components/dropdown-filter.html')
+          </div>
+          <div class="filter__item">
+            @@include('../components/dropdown-filter-1.html')
+          </div>
+          <div class="filter__item">
+            @@include('../components/dropdown-filter-2.html')
+          </div>
+          <div class="filter__item">
+            @@include('../components/dropdown-filter-3.html')
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="filter__hidden-bottom">
+      <button class="filter__reset btn-reset">
+        <span class="text">
+          Очистить фильтры
+        </span>
+
+        <span class="svg">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <use xlink:href="img/sprite.svg#filterReset"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="filter__box-reset">
+    <button class="filter__reset btn-reset">
+        <span class="text">
+          Очистить фильтры
+        </span>
+
+        <span class="svg">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <use xlink:href="img/sprite.svg#filterReset"></use>
+          </svg>
+        </span>
+      </button>
+  </div>
+</div>

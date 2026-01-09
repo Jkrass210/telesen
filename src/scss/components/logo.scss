@@ -1,0 +1,23 @@
+.logo {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid var(--dark-blue);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  &:focus,&:focus-visible {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

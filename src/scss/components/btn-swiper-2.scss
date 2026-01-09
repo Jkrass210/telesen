@@ -1,0 +1,18 @@
+.btn-swiper-2 {
+  width: 188px;
+  height: 68px;
+  min-width: 188px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  color: var(--dark-blue);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+}

@@ -1,0 +1,283 @@
+.card-sections-main {
+  position: relative;
+  background-color: var(--bgBtn);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  &:hover {
+    .card-sections-main__hover-card {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      //z-index: 1;
+      //width: calc(200% + 24px);
+    }
+
+    .card-sections-main__hover-card-img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    right: 32px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--black);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em;
+    line-height: 1.2em;
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__hover-card {
+    padding: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    //transform: translateX(-120%);
+    width: calc(200% + 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    picture {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &__hover-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__hover-card-top-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__hover-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: width 0.4s ease-in-out;
+    object-fit: cover;
+  }
+
+  &__hover-card-title {
+    position: relative;
+    width: calc(50% - 64px);
+    z-index: 1;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--white);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em;
+    line-height: 1.2em;
+  }
+
+  &__desc {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--white);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.6em;
+    line-height: 1.2em;
+  }
+
+  &__hover-card-link {
+    position: relative;
+    z-index: 2;
+    padding: 12px 24px;
+    background-color: var(--blue);
+    border-radius: 50px;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--white);
+    transition: background-color 0.4s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      background-color: var(--dark-blue);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-sections-main {
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 96%;
+    }
+
+    &__title {
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      font-size: 18px;
+    }
+
+    &__hover-card {
+      padding: 20px;
+    }
+
+    &__hover-card-title {
+      font-size: 18px;
+      width: calc(50% - 40px);
+    }
+
+    &__hover-card-top {
+      gap: 8px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+
+    &__hover-card-link {
+      padding: 14px 24px;
+      font-size: 15px;
+      gap: 7px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card-sections-main {
+    background-size: contain;
+
+    &::before {
+      padding-top: 64%;
+    }
+
+    &__title {
+      top: 24px;
+      left: 24px;
+      right: 24px;
+      font-size: 18px;
+    }
+
+    &__hover-card {
+      padding: 24px;
+    }
+
+    &__hover-card-top-link {
+      display: none;
+    }
+
+    &__hover-card-title {
+      font-size: 18px;
+      width: calc(50% - 48px);
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .card-sections-main {
+    &::before {
+      padding-top: 29%;
+      transition: padding-top 0.4s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        padding-top: 67%;
+      }
+    }
+
+    &__hover-card {
+      width: 100%;
+    }
+
+    &__title {
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      font-size: 16px;
+    }
+
+    &__hover-card {
+      padding: 16px;
+      gap: 36px;
+    }
+    &__hover-card-title {
+      font-size: 16px;
+      width: 100%;
+    }
+    &__desc {
+      font-weight: 200;
+      font-size: 15px;
+    }
+    &__hover-card-top-link {
+      display: none;
+    }
+    &__hover-card-link {
+      font-size: 15px;
+      line-height: 133%;
+      width: 100%;
+      max-width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

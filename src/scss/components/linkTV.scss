@@ -1,0 +1,52 @@
+.linkTV {
+  display: flex;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+
+    .text {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 16px;
+      color: var(--black);
+      transition: color 0.4s ease-in-out;
+    }
+
+    .svg {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      background-color: var(--dark-blue);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      .text {
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .linkTV {
+    &__link {
+      .text {
+        font-size: 15px;
+      }
+    }
+  }
+}

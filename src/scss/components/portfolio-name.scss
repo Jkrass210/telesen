@@ -1,0 +1,109 @@
+.portfolio-name {
+  &:has(.portfolio-name__btn.active) {
+    background-color: var(--white);
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    border: 1.20px solid var(--white);
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 18px;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.14);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    .svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+    &.active {
+      padding: 16px 20px;
+      color: var(--black);
+      .svg {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+      &+.portfolio-name__list-wrapper {
+        display: block;
+      }
+    }
+  }
+
+  &__list-wrapper {
+    display: none;
+    height: 100%;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    li:has(.portfolio-name__item-btn.active) {
+      display: none;
+    }
+  }
+  &__item-btn {
+    text-align: start;
+    width: 100%;
+    padding: 20px;
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 118%;
+    color: var(--black);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--gray-100);
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .portfolio-name {
+    &__btn {
+      padding: 12px 40px;
+      font-size: 16px;
+      &.active {
+        padding: 12px 20px;
+      }
+    }
+    &__item-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .portfolio-name {
+    &__btn {
+      padding: 14px 16px;
+      background-color: var(--gray-100);
+      font-size: 16px;
+      color: var(--black);
+    }
+    &__list-wrapper {
+      background-color: var(--gray-100);
+    }
+  }
+}
+

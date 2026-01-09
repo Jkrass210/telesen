@@ -1,0 +1,148 @@
+.card-equipment {
+  position: relative;
+  background-color: var(--gray-50);
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 81%;
+  }
+
+  &__link {
+    padding: 32px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    gap: 15px;
+    background-color: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.4s ease-in-out;
+
+    /*&::before {
+      content: '';
+      position: absolute;
+      inset: 70px 0 0 0;
+      opacity: 0;
+      background-image: url(../img/card-equipment/ornament.png);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: contain;
+      transition: opacity 0.4s ease-in-out;
+    }*/
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    /*&:focus-visible,
+    &:hover,
+    &:active {
+      background-color: #E2E9F4;
+
+      &::before {
+        opacity: 1;
+      }
+
+      .card-equipment__title {
+        color: var(--dark-blue);
+      }
+    }*/
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    transition: color 0.4s ease-in-out;
+  }
+
+  &__box-img {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    min-height: 100px;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-equipment {
+    &::before {
+      padding-top: 79%;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .card-equipment {
+    &__link {
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 70px 0 0 0;
+        opacity: 0;
+        background-image: url(../img/card-equipment/ornament.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        background-color: #E2E9F4;
+
+        &::before {
+          opacity: 1;
+        }
+
+        .card-equipment__title {
+          color: var(--dark-blue);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card-equipment {
+    &::before {
+      padding-top: 53%;
+    }
+
+    &__link {
+      padding: 24px;
+      gap: 15px;
+    }
+
+    &__title {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .card-equipment {
+    &__box-img {
+      min-height: 74px;
+    }
+
+  }
+}

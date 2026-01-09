@@ -1,0 +1,30 @@
+.box-our-customers {
+  &__line-swiper-title {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-our-customers {
+    &__line-swiper-title {
+      margin-bottom: 12px;
+    }
+    .min-title {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .box-our-customers {
+    &__line-swiper-title {
+      margin-bottom: 14px;
+    }
+    .min-title {
+      font-size: 22px;
+    }
+  }
+}

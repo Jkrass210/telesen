@@ -1,0 +1,237 @@
+.card-detailed-top {
+  margin-bottom: 76px;
+  &__line-title-hidden {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    gap: 28px;
+  }
+
+  &__left {
+    width: calc(404 / 1280 * 100%);
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__line-title {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__group-min-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .min-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .name {
+        color: var(--black);
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 114.286%;
+        opacity: 0.5;
+      }
+
+      .info {
+        color: #000;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 133.333%;
+      }
+    }
+  }
+
+  &__line-desc {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__desc {
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.8em;
+    line-height: 1.2em;
+  }
+
+  &__link {
+    width: fit-content;
+    color: var(--blue);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 133.333%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      color: var(--black);
+    }
+  }
+
+  &__group-btn {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    a {
+      min-width: 247px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-detailed-top {
+    margin-bottom: 56px;
+    &__content {
+      gap: 27px;
+    }
+    &__left {
+      width: calc(332 / 976 * 100%);
+    }
+    &__line-title {
+      margin-bottom: 16px;
+      gap: 12px;
+    }
+
+    &__group-min-info {
+      gap: 20px;
+
+      .min-info {
+        .name {
+          font-size: 13px;
+          line-height: 125%;
+        }
+        .info {
+          font-size: 17px;
+          line-height: 125%;
+        }
+      }
+    }
+
+    &__line-desc {
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    &__desc {
+      font-size: 17px;
+      line-height: 125%;
+      -webkit-line-clamp: 5;
+      max-height: 6em;
+    }
+
+    &__link {
+      font-size: 17px;
+      line-height: 125%;
+    }
+
+    &__group-btn {
+      gap: 12px;
+
+      a {
+        min-width: calc(50% - 6px);
+      }
+
+      .submit-order {
+        padding: 15.5px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      .documentation {
+        padding: 15.5px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card-detailed-top {
+    margin-bottom: 40px;
+    &__line-title-hidden {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    &__content {
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__left {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .card-detailed-top {
+    margin-bottom: 20px;
+    &__line-title-hidden {
+      margin-bottom: 12px;
+    }
+    &__line-title {
+      margin-bottom: 16px;
+    }
+    &__content {
+      gap: 20px;
+    }
+    &__group-min-info {
+
+      .min-info {
+        .info {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      -webkit-line-clamp: 9;
+      max-height: 11.2em;
+    }
+    &__group-btn {
+      flex-direction: column;
+      gap: 8px;
+      a {
+        min-width: 100%;
+      }
+    }
+  }
+}

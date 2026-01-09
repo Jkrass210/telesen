@@ -1,0 +1,38 @@
+.box-our-partners {
+  margin-bottom: 76px;
+
+  &__line-title {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-our-partners {
+    margin-bottom: 109px;
+
+    &__line-title {
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      margin: 0 -24px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .box-our-partners {
+    margin-bottom: 60px;
+
+    &__line-title {
+      margin-bottom: 12px;
+      .min-title {
+        font-size: 20px;
+      }
+    }
+
+    &__content {
+      margin: 0 -16px;
+    }
+  }
+}

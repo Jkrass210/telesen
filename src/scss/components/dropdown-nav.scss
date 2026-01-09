@@ -1,0 +1,118 @@
+.dropdown-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__btn {
+    cursor: auto;
+    //pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--dark-blue);
+    .text {
+      width: 100%;
+      display: block;
+      text-align: start;
+      /*display: flex;
+      align-items: center;
+      justify-content: center;*/
+    }
+    .svg {
+      width: 14px;
+      height: 21px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    a {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 18px;
+      color: var(--black);
+      transition: color 0.4s ease-in-out;
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .dropdown-nav {
+    &__btn {
+      .text {
+        font-size: 17px;
+      }
+    }
+    &__list {
+      a {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .dropdown-nav {
+    &__btn {
+      .text {
+        font-size: 16px;
+      }
+    }
+    &__list {
+      max-width: 205px;
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .dropdown-nav {
+    &__btn {
+      cursor: pointer;
+      //pointer-events: auto;
+      max-width: max-content;
+      svg {
+        transition: transform 0.4s ease-in-out;
+      }
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+        & + .dropdown-nav__list {
+          display: flex;
+        }
+      }
+      .text {
+        font-size: 17px;
+      }
+      .svg {
+        display: flex;
+      }
+    }
+    &__list {
+      display: none;
+      max-width: 100%;
+      &.active {
+        display: flex;
+      }
+      a {
+        font-size: 17px;
+      }
+    }
+  }
+}

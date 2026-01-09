@@ -1,0 +1,50 @@
+.card-reviews {
+  &__link {
+    height: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+    transition: background-color 0.4s ease-in-out;
+    picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--gray-50, #F6F9FA);
+    }
+  }
+  &__box-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .time {
+      color: var(--black, #1E1E1E);
+      font-family: var(--font-family);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      opacity: 0.4;
+    }
+    .title {
+      color: #000;
+      font-family: var(--font-family);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 2.4em;
+      line-height: 1.2em;
+    }
+  }
+}

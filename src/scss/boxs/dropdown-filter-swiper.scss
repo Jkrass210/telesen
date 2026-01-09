@@ -1,0 +1,37 @@
+.dropdown-filter-swiper {
+  max-height: 300px;
+  .swiper-wrapper {
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .swiper-scrollbar.swiper-scrollbar-vertical, .swiper-vertical>.swiper-scrollbar {
+    right: 8px;
+    top: 12px;
+    height: calc(100% - 24px);
+    width: 4px;
+    border-radius: 0;
+    background: rgba(109, 145, 198, 0.10);
+  }
+  .swiper-scrollbar-drag {
+    border-radius: 0;
+    background: var(--blue);
+  }
+}
+
+@media (min-width: 750px) {
+  .dropdown-filter-swiper {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+
+@media (max-width: 750px) {
+  .dropdown-filter-swiper {
+    max-height: calc(100vh - 120px);
+  }
+}

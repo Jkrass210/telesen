@@ -1,0 +1,252 @@
+.dropdown-filter {
+  position: relative;
+  display: flex;
+
+  &__throw {
+    display: none;
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    white-space: nowrap;
+    color: var(--black);
+    font-family: var(--font-family);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: var(--gray-50);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    .svg {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .box-for-reset {
+      display: flex;
+      gap: 4px;
+      overflow: hidden;
+    }
+
+    .throw {
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      color: var(--blue);
+      background-color: #E2E9F4;
+    }
+
+    .text {
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 200;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    /*&:focus-visible,
+    &:hover,
+    &:active {
+      background-color: var(--blue);
+      color: var(--white);
+    }*/
+
+  }
+
+  &__box {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    top: 100%;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--gray-50);
+
+    &.active {
+      display: block;
+    }
+
+
+    &-back {
+      display: none;
+    }
+
+
+    /*************/
+  }
+
+  &__box-scroll {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+
+    .scroll-y {
+      position: absolute;
+      height: auto !important;
+      width: 4px !important;
+      top: 12px !important;
+      right: 8px !important;
+      bottom: 12px !important;
+    }
+
+    .scroll-element_track {
+      border-radius: 0 !important;
+      opacity: 1 !important;
+      background-color: rgba(109, 145, 198, 0.10) !important;
+    }
+
+    .scroll-element_outer {
+      border-radius: 0 !important;
+    }
+
+    .scroll-bar {
+      background-color: var(--blue) !important;
+      opacity: 1 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1100px) {
+  .dropdown-filter {
+    &__btn {
+      padding: 16px 20px;
+      gap: 20px;
+
+      .text {
+        font-size: 15px;
+        line-height: 133.333%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .dropdown-filter {
+    &__btn {
+      gap: 7px;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .dropdown-filter {
+
+    &:has(.dropdown-filter__btn.reset-active) {
+      .dropdown-filter__throw {
+        display: inline-block;
+      }
+    }
+
+    &__btn {
+      &.reset-active {
+        background-color: var(--blue);
+        color: var(--white);
+
+        .throw {
+          display: flex;
+        }
+      }
+
+      &.active {
+        background-color: var(--blue);
+        color: var(--white);
+
+        .svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        background-color: var(--blue);
+        color: var(--white);
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .dropdown-filter {
+    &__btn {
+      width: 100%;
+      padding: 16px 0;
+      background-color: transparent;
+
+      .svg {
+        display: none;
+      }
+    }
+
+    &__box {
+      position: fixed;
+      padding: 28px 0;
+      inset: 0;
+    }
+
+    &__box-back {
+      margin-bottom: 16px;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: start;
+    }
+
+    &__back {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--black);
+      font-family: var(--font-family);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 125%;
+
+      .svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    &__box-scroll {
+      max-height: calc(100vh - 56px - 80px);
+    }
+  }
+}

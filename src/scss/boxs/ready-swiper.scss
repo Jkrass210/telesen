@@ -1,0 +1,20 @@
+.ready-swiper {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+  &-btn-group {
+    padding-top: 12px;
+    .group-arrow {
+      justify-content: start;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .ready-swiper {
+    &-btn-group {
+      padding-top: 16px;
+    }
+  }
+}

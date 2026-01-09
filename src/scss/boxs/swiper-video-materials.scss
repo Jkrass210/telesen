@@ -1,0 +1,65 @@
+.swiper-video-materials {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .btn-swiper-1 {
+    position: static;
+    transform: none;
+    width: 52px;
+    height: 52px;
+    color: var(--white);
+    flex-shrink: 0;
+    background-color: var(--blue);
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      background-color: var(--dark-blue);
+    }
+  }
+
+  &__btn-group {
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    z-index: 5;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-video-materials {
+    &__btn-group {
+      top: 32px;
+      right: 32px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .swiper-video-materials {
+    .btn-swiper-1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .swiper-video-materials {
+    &__btn-group {
+      top: 16px;
+      right: 16px;
+    }
+    .btn-swiper-1 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

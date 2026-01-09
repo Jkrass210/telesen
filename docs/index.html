@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список страниц - ТЕЛЕСЕН</title>
+  <link href="css/normalize.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/jquery.scrollbar.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/style.css?_v=20260109114332" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260109114332"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260109114332" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.scrollbar.min.js?_v=20260109114332" defer></script>
+  <script src="js/fslightbox.js?_v=20260109114332" defer></script>
+  <script type="module" src="js/main.js?_v=20260109114332"></script>
+</head>
+
+  <style>
+    html,
+    body,
+    .page-wrapper {
+      height: 100%;
+    }
+    .page-wrapper {
+      overflow: auto;
+    }
+    .pages-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 100px 40px;
+    }
+    .pages-intro__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 200px;
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 32px;
+      /*color: #ffe100;*/
+      border: 2px solid var(--dark-blue);
+    }
+    .pages-intro__list {
+      margin: 0;
+      padding: 60px 0 0 20px;
+      list-style-type: none;
+      border-left: 2px solid var(--dark-blue);
+    }
+    .pages-intro__list > li {
+      position: relative;
+    }
+    .pages-intro__list > li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    .pages-intro__list > li:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 2px);
+      right: calc(100% + 10px);
+      transform: translateY(-50%);
+      display: block;
+      width: 10px;
+      height: 2px;
+      background: var(--dark-blue);
+    }
+    .pages-intro__list > li > a {
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 600px;
+      color: var(--dark-blue);
+    }
+    .pages-intro__list > li > a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <div id="preloader">
+  <div class="loader"></div>
+</div>
+    <div class="pages-intro">
+      <div class="pages-intro__logo">
+        <svg width="216" height="64" viewBox="0 0 216 64" fill="none">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </div>
+      <ul class="pages-intro__list">
+        <li>
+          <a href="main.html">Главная</a>
+        </li>
+        <li>
+          <a href="portfolio.html">Портфолио</a>
+        </li>
+        <li>
+          <a href="portfolio-detailed.html">Портфолио-детальная</a>
+        </li>
+        <li>
+          <a href="portfolio-detailed-2.html">Портфолио-детальная-2</a>
+        </li>
+        <li>
+          <a href="equipment.html">Поставка оборудования</a>
+        </li>
+        <li>
+          <a href="equip-category.html">Категория оборудования</a>
+        </li>
+        <li>
+          <a href="contacts.html">Контакты</a>
+        </li>
+        <li>
+          <a href="page-licenses.html">Лицензии и допуски</a>
+        </li>
+        <li>
+          <a href="card-detailed.html">Карточка товара</a>
+        </li>
+        <li>
+          <a href="404.html">404</a>
+        </li>
+        <li>
+          <a href="portfolio-map.html">Портфолио-на карте</a>
+        </li>
+        <li>
+          <a href="about.html">О компании</a>
+        </li>
+        <li>
+          <a href="registry.html">Реестр</a>
+        </li>
+        <li>
+          <a href="page-reviews.html">Отзывы</a>
+        </li>
+        <li>
+          <a href="page-job.html">Вакансии</a>
+        </li>
+        <li>
+          <a href="page-service.html">Услуги</a>
+        </li>
+        <li>
+          <a href="service-detailed.html">Услуги детальная</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

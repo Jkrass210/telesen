@@ -1,0 +1,35 @@
+.portfolio-name-swiper {
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+
+  .swiper-wrapper {
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .swiper-scrollbar.swiper-scrollbar-vertical,
+  .swiper-vertical>.swiper-scrollbar {
+    right: 8px;
+    top: 12px;
+    height: calc(100% - 12px - 12px);
+    width: 4px;
+    border-radius: 0;
+    background: rgba(109, 145, 198, 0.10);
+  }
+
+  .swiper-scrollbar-drag {
+    border-radius: 0;
+    background: var(--blue);
+  }
+}
+
+@media (max-width: 950px) {
+  .portfolio-name-swiper {
+    max-height: 215px;
+  }
+}

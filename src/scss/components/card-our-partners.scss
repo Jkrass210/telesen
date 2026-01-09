@@ -1,0 +1,20 @@
+.card-our-partners {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 100%;
+  min-height: 132px;
+  &__title {
+    color: var(--black);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}

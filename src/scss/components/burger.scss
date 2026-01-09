@@ -1,0 +1,48 @@
+.burger {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .burger {
+    position: relative;
+    z-index: 4;
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-height: 36px;
+    height: 36px;
+    color: var(--dark-blue);
+    background-color: var(--bgBtn);
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    &.active {
+      .burger__top {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+      }
+      .burger__close {
+        opacity: 1;
+        position: static;
+        visibility: visible;
+      }
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--white);
+      background-color: var(--dark-blue);
+    }
+    &__top {
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+    &__close {
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+  }
+}

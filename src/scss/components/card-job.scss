@@ -1,0 +1,53 @@
+.card-job {
+  position: sticky;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px;
+  background-color: var(--gray-50, #F6F9FA);
+  &__title {
+    color: var(--black, #1E1E1E);
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-job {
+    &__title {
+      font-size: 22px;
+    }
+    .static-info p {
+      font-size: 17px;
+    }
+    .static-info ul li {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card-job {
+    position: static;
+  }
+}
+
+@media (max-width: 750px) {
+  .card-job {
+    padding: 20px;
+    gap: 12px;
+    &__title {
+      font-size: 20px;
+    }
+    .static-info p {
+      font-size: 16px;
+    }
+    .static-info ul li {
+      font-size: 16px;
+    }
+  }
+}

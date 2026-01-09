@@ -1,0 +1,63 @@
+.box-presentations {
+  display: flex;
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  &__btn {
+    height: 52px;
+    padding: 5px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    background-color: var(--blue, #6D91C6);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--dark-blue);
+    }
+  }
+  &__modal {
+    opacity: 0;
+    visibility: hidden;
+    //transform: translate(120%);
+    
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      //transform: none;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-presentations {
+    top: 32px;
+    right: 32px;
+  }
+}
+
+@media (max-width: 950px) {
+  .box-presentations {
+    &__btn {
+      height: 44px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .box-presentations {
+    position: static;
+    &__btn {
+      width: 100%;
+    }
+  }
+}

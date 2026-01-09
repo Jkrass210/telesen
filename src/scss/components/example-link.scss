@@ -1,0 +1,71 @@
+.example-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--black);
+  font-family: var(font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  transition: font-weight 0.4s ease-in-out;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  .svg {
+    display: flex;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+@media (max-width: 1100px) {
+  .example-link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 950px) {
+  .example-link {
+    padding: 16px;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--gray-100);
+    .text {
+      display: none;
+    }
+    .svg {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .example-link {
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      font-weight: 300;
+      .svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .example-link {
+    padding: 14px;
+    font-size: 16px;
+  }
+}

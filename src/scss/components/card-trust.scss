@@ -1,0 +1,27 @@
+.card-trust {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__link {
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .card-trust {
+    max-width: 185px;
+    max-height: 117px;
+  }
+}
+
+@media (max-width: 750px) {
+  .card-trust {
+    &__link {
+      padding: 24px 24px;
+    }
+  }
+}

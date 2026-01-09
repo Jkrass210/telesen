@@ -1,0 +1,19 @@
+.box-about-bottom {
+  &__content {
+    color: var(--black, #1E1E1E);
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 130%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-about-bottom {
+    &__content {
+      font-size: 17px;
+      line-height: 125%;
+    }
+  }
+}

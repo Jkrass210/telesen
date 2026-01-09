@@ -1,0 +1,71 @@
+<div class="dropdown-filter">
+  <button class="dropdown-filter__throw btn-reset"></button>
+  <!--Сама кнопка сброса <button class="dropdown-filter__throw btn-reset"></button> она фиксированный позицианированием првязана к <span class="throw"> -->
+  <!-- включается все это дело при добавлении на кнопку <button class="dropdown-filter__btn btn-reset"> класса "" -->
+  <button class="dropdown-filter__btn btn-reset">
+    <span class="box-for-reset">
+      <span class="text">Заказчик</span>
+      <span class="throw">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#dropdownFilterThrow"></use>
+        </svg>
+      </span>
+    </span>
+    <span class="svg">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <use xlink:href="img/sprite.svg#dropdownFilterArrow"></use>
+      </svg>
+    </span>
+  </button>
+
+  <div class="dropdown-filter__box">
+
+    <div class="dropdown-filter__box-back">
+      <button class="dropdown-filter__back btn-reset">
+        <span class="svg">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+            <use xlink:href="img/sprite.svg#dropdownFilterBack"></use>
+          </svg>
+        </span>
+        <span class="text">
+          Вернуться назад
+        </span>
+      </button>
+
+      <div class="dropdown-filter__name">
+        По дате
+      </div>
+    </div>
+
+    <div class="dropdown-filter-swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="dropdown-filter__list swiper-slide">
+          <label class="filter-checkbox">
+            <input class="filter-checkbox__input" type="checkbox" name="Заказчик" value="ЛУКОЙЛ-Западная Сибирь, ООО">
+            <span class="filter-checkbox__catom">
+              ЛУКОЙЛ-Западная Сибирь, ООО
+            </span>
+          </label>
+
+          <label class="filter-checkbox">
+            <input class="filter-checkbox__input" type="checkbox" name="Заказчик" value="Синара, АО">
+            <span class="filter-checkbox__catom">
+              Синара, АО
+            </span>
+          </label>
+
+          <label class="filter-checkbox">
+            <input class="filter-checkbox__input" type="checkbox" name="Заказчик" value="Атомстройкомплекс, ООО">
+            <span class="filter-checkbox__catom">
+              Атомстройкомплекс, ООО
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+
+
+  </div>
+</div>

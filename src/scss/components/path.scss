@@ -1,0 +1,119 @@
+.path {
+  &__list {
+    padding: 28px 0;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    overflow: hidden; /* Скрываем выходящие за границы элементы */
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0; /* Запрещаем сжатие элементов */
+    &:not(.last-item) {
+      max-width: 200px; /* Максимальная ширина элемента */
+      min-width: 0; /* Разрешаем сжатие до 0 */
+    }
+    &:not(.last-item) .text {
+      white-space: nowrap; /* Запрещаем перенос текста */
+      overflow: hidden; /* Скрываем выходящий текст */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+      display: block;
+      max-width: 100%;
+    }
+  }
+  &__item.last-item {
+    flex-shrink: 1;
+    min-width: 0;
+    
+    .text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 133.333%;
+    opacity: 0.5;
+    transition: opacity 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      opacity: 1;
+    }
+  }
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .last-item {
+    .text {
+      color: var(--black);
+      font-family: var(--font-family);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 133.333%;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .path {
+    &__list {
+      padding: 24px 0;
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 142.857%;
+    }
+    .last-item {
+      .text {
+        font-size: 14px;
+        line-height: 142.857%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .path {
+    &__list {
+      padding: 28px 0;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .path {
+    &__list {
+      padding: 24px 0;
+      gap: 4px;
+    }
+    &__item {
+      gap: 4px;
+    }
+    &__link {
+      font-size: 13px;
+      line-height: 153.846%;
+    }
+    .last-item {
+      .text {
+        font-size: 13px;
+        line-height: 153.846%;
+      }
+    }
+  }
+}

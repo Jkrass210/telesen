@@ -1,0 +1,113 @@
+.card-presentations {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.4s ease-in-out;
+
+  &__title {
+    color: var(--black, #1E1E1E);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    gap: 6px;
+
+    .tag {
+      height: 24px;
+      padding: 2px 12px;
+      color: var(--black, #1E1E1E);
+      font-family: var(--font-family);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: 200;
+      line-height: normal;
+      border-radius: 100px;
+      background-color: var(--gray-100, #EEF2F5);
+      transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {}
+  }
+}
+
+@media (min-width: 950px) {
+  .card-presentations {
+    &:has(.card-presentations__link:hover) {
+      background-color: var(--gray-50, #F6F9FA);
+
+      .card-presentations__tags {
+        .tag {
+          color: var(--white);
+          background-color: var(--blue, #6D91C6);
+        }
+      }
+    }
+    &:has(.card-presentations__link:focus-visible) {
+      background-color: var(--gray-50, #F6F9FA);
+
+      .card-presentations__tags {
+        .tag {
+          color: var(--white);
+          background-color: var(--blue, #6D91C6);
+        }
+      }
+    }
+    &:has(.card-presentations__link:active) {
+      background-color: var(--gray-50, #F6F9FA);
+
+      .card-presentations__tags {
+        .tag {
+          color: var(--white);
+          background-color: var(--blue, #6D91C6);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card-presentations {
+    padding: 16px;
+    &__tags {
+      .tag {
+        color: var(--white);
+        background-color: var(--blue, #EEF2F5);
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .card-presentations {
+    &__title {
+      font-size: 17px;
+      line-height: 125%;
+    }
+  }
+}

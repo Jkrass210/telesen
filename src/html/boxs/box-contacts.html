@@ -1,0 +1,114 @@
+<section class="box-contacts section">
+  <div class="box-contacts__container container">
+    <div class="box-contacts__content">
+      <div class="contacts-left">
+        <div class="contacts-left__group">
+          <div class="down-contact address">
+            <h3 class="down-contact__title small-contacts-title">
+              Адрес
+            </h3>
+            <div class="down-contact__wrapper">
+              <ul class="down-contact__list list-reset">
+                <li class="down-contact__item">
+                  <a href="https://yandex.ru/maps/org/telesen/1103255643/?ll=60.594596%2C56.824148&z=14"
+                    target="_blank">г. Екатеринбург, </a>
+                </li>
+                <li class="down-contact__item">
+                  <a href="https://yandex.ru/maps/org/telesen/1103255643/?ll=60.594596%2C56.824148&z=14"
+                    target="_blank">ул. Народной воли, 25, офис 112</a>
+                </li>
+              </ul>
+            </div>
+            <div class="down-contact__mode">
+              <span>
+                Пн — Пт: c 09:00 до18:00
+              </span>
+              <span>
+                Сб — Вс: выходной
+              </span>
+            </div>
+          </div>
+
+          @@include('../components/down-phone.html')
+          @@include('../components/down-email.html')
+
+          <div class="down-contact">
+            <h3 class="down-contact__title small-contacts-title">
+              Директор
+            </h3>
+            <div class="down-contact__wrapper">
+              <ul class="down-contact__list list-reset">
+                <li class="down-contact__item">
+                  <span>
+                    Шиблев Александр Николаевич
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="down-contact">
+            <h3 class="down-contact__title small-contacts-title">
+              Руководитель группы компаний
+            </h3>
+            <div class="down-contact__wrapper">
+              <ul class="down-contact__list list-reset">
+                <li class="down-contact__item">
+                  <span>
+                    Смагин Сергей Петрович
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="contacts-left__box-link">
+          <a href="#" download class="contacts-left__link">
+            <span class="text">Скачать карточку компании</span>
+            <span class="svg">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <use xlink:href="img/sprite.svg#download"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="contacts-right">
+        <div id="contactsMap" class="contacts-map"></div>
+        <script>
+          ymaps.ready(init);
+
+          function init() {
+            const map = new ymaps.Map("contactsMap", {
+              center: [56.824168, 60.593899],
+              zoom: 15
+            });
+
+            const placemark = new ymaps.Placemark(
+              [56.824168, 60.593899],
+              {
+                hintContent: "Моя метка",
+                balloonContent: "Описание"
+              },
+              {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/box-contacts/place.svg',
+                iconImageSize: [35, 47],
+                iconImageOffset: [-20, -20]
+              }
+            );
+
+            map.geoObjects.add(placemark);
+
+            /*map.setBounds(map.geoObjects.getBounds(), {
+              checkZoomRange: true,
+              zoomMargin: 50
+            });*/
+
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</section>

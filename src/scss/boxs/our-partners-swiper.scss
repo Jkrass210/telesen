@@ -1,0 +1,27 @@
+.our-partners-swiper {
+  .swiper-slide {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+  &-btn-group {
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}
+@media (max-width: 1100px) {
+  .our-partners-swiper {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 750px) {
+  .our-partners-swiper {
+    padding: 0 16px;
+    &-btn-group {
+      padding-top: 16px;
+    }
+  }
+}

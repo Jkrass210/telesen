@@ -1,0 +1,102 @@
+.form-1 {
+  &__title {
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    color: var(--black);
+  }
+  &__desc {
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+    color: #979797;
+    transition: color 0.4s ease-in-out;
+    &.bottom {
+      font-weight: 200;
+      font-size: 13px;
+      text-align: start;
+    }
+    a {
+      text-decoration: underline;
+      &:focus,&:focus-visible {
+        outline: none;
+        transition: color 0.4s ease-in-out;
+      }
+      &:focus-visible,&:hover,&:active {
+        color: var(--blue);
+      }
+    }
+  }
+  &__list {
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    li {
+      position: relative;
+      flex: 1;
+      span.is-error {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        font-size: 10px;
+        color: rgb(219, 28, 28);
+      }
+      .form-error {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        font-size: 10px;
+        color: rgb(219, 28, 28);
+      }
+    }
+  }
+  &__input {
+    padding: 16px 20px;
+    border-radius: 0;
+    width: 100%;
+    border: 1.40px solid var(--gray-100);
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--black);
+    background-color: var(--white);
+    transition: border-color 0.4s ease-in-out;
+    &.is-error {
+      border-color: rgb(219, 28, 28);
+    }
+    &.form-error-input {
+      border-color: rgb(219, 28, 28);
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible {
+      border-color: var(--black);
+    }
+  }
+  &__submit {
+    margin-bottom: 8px;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid var(--white);
+    background-color: var(--blue);
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--white);
+    transition: border-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      border-color: var(--blue);
+    }
+  }
+}

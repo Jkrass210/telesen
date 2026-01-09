@@ -1,0 +1,66 @@
+.counter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &__number {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 56px;
+    color: var(--blue);
+
+    span {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 56px;
+      color: var(--blue);
+    }
+
+    &.hide {
+      opacity: 0;
+    }
+
+    &.number {
+      position: absolute;
+
+      span {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--black);
+  }
+}
+
+@media (max-width: 950px) {
+  .counter {
+    &__number {
+      font-size: 40px;
+      span {
+        font-size: 40px;
+      }
+    }
+    &__desc {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .counter {
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.box-services-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .services-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__btn {
+      height: 76px;
+      padding: 5px 32px;
+      display: flex;
+      align-items: center;
+      text-align: start;
+      justify-content: space-between;
+      color: var(--black, #1E1E1E);
+      font-family: var(--font-family);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 133.333%;
+      background-color: var(--gray-50, #F6F9FA);
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      svg {
+        transition: transform 0.4s ease-in-out;
+      }
+
+      &.active {
+        svg {
+          transform: rotate(45deg);
+        }
+
+        &+.services-tab__list {
+          display: grid;
+        }
+      }
+
+      .svg {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--blue, #6D91C6);
+      }
+    }
+
+    &__list {
+      display: none;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+
+      &.active {
+        display: grid;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .box-services-tabs {
+    .services-tab {
+      &__list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-services-tabs {
+    .services-tab {
+      gap: 20px;
+      &__btn {
+        padding: 5px 28px;
+      }
+      &__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .box-services-tabs {
+    .services-tab {
+      &__btn {
+        height: 64px;
+        font-size: 17px;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .box-services-tabs {
+    .services-tab {
+      &__btn {
+        padding: 5px 20px;
+        font-size: 15px;
+      }
+      &__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+  }
+}

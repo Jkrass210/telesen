@@ -1,0 +1,87 @@
+.box-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(30, 30, 30, 0.5);
+  &.active {
+    display: flex;
+  }
+  &__window {
+    width: 424px;
+    min-height: 493px;
+    padding: 36px;
+    position: relative;
+    background-color: var(--white);
+    &:has(.box-modal__message.active) {
+      display: flex;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 6px);
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--gray-100);
+    }
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__wrapper {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &__message {
+    display: none;
+    &.active {
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-modal {
+    &__window {
+      min-height: 480px;
+      padding: 28px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .box-modal {
+    &__close {
+      right: 12px;
+      left: auto;
+      top: 12px;
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

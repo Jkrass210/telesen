@@ -1,0 +1,139 @@
+.sections-main {
+  padding-top: 48px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    overflow: hidden;
+
+    li:nth-child(4n) {
+      .card-sections-main {
+        &__hover-card {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    li {
+      &.card-3 {
+        .card-sections-main {
+          background-image: url(../img/sec-main/3.png);
+        }
+      }
+
+      &.card-5 {
+        .card-sections-main {
+          background-image: url(../img/sec-main/5.png);
+        }
+      }
+
+      &.card-6 {
+        .card-sections-main {
+          background-image: url(../img/sec-main/6.png);
+        }
+      }
+
+      &.card-7 {
+        .card-sections-main {
+          background-image: url(../img/sec-main/7.png);
+        }
+      }
+
+      &.card-8 {
+        .card-sections-main {
+          background-image: url(../img/sec-main/8.png);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .sections-main {
+    padding-top: 48px;
+
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .sections-main {
+    padding-top: 24px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li:nth-child(2n) {
+        .card-sections-main {
+          &__hover-card {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+
+      li {
+        &.card-1 {
+          .card-sections-main {
+            background-image: url(../img/sec-main/1.950.png);
+          }
+        }
+
+        &.card-3 {
+          .card-sections-main {
+            background-image: url(../img/sec-main/3.950.png);
+          }
+        }
+
+        &.card-4 {
+          .card-sections-main {
+            background-image: url(../img/sec-main/4.950.png);
+          }
+        }
+
+        &.card-5 {
+          .card-sections-main {
+            background-image: url(../img/sec-main/5.950.png);
+          }
+        }
+
+        &.card-6 {
+          .card-sections-main {
+            background-image: none !important;
+          }
+        }
+
+        &.card-7 {
+          .card-sections-main {
+            background-image: none !important;
+          }
+        }
+
+        &.card-8 {
+          .card-sections-main {
+            background-image: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .sections-main {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+
+      li {
+        .card-sections-main {
+          background-image: none !important;
+        }
+      }
+    }
+  }
+}

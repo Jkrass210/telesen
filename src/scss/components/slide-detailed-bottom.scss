@@ -1,0 +1,17 @@
+.slide-detailed-bottom {
+  height: 100%;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  picture {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

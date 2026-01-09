@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link href="css/normalize.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/jquery.scrollbar.min.css?_v=20260109114332" rel="stylesheet">
+  <link href="css/style.css?_v=20260109114332" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260109114332"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.inputmask.min.js?_v=20260109114332" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260109114332" defer></script>
+  <script src="js/jquery.scrollbar.min.js?_v=20260109114332" defer></script>
+  <script src="js/fslightbox.js?_v=20260109114332" defer></script>
+  <script type="module" src="js/main.js?_v=20260109114332"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__line-top">
+      <div class="header__box-logo">
+        <a class="logo" href="/">
+  <svg width="216" height="64" viewBox="0 0 216 64" fill="none">
+    <use xlink:href="img/sprite.svg#logo"></use>
+  </svg>
+</a>
+      </div>
+      <div class="header__box-contacts">
+        <div class="dropdown-contact phone">
+  <button class="dropdown-contact__main-btn btn-reset">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#btnPhone"></use>
+    </svg>
+  </button>
+  <h3 class="dropdown-contact__title small-contacts-title">
+    Телефон
+  </h3>
+  <div class="dropdown-contact__wrapper">
+    <ul class="dropdown-contact__list list-reset">
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-18">+7 (343) 310-29-18</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+      <li class="dropdown-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+    </ul>
+    <button class="dropdown-contact__small-btn btn-reset">
+      <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+        <use xlink:href="img/sprite.svg#btnPhoneArrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+        <div class="dropdown-contact email">
+  <h3 class="dropdown-contact__title small-contacts-title">
+    Эл. адрес
+  </h3>
+  <div class="dropdown-contact__wrapper">
+    <ul class="dropdown-contact__list list-reset">
+      <li class="dropdown-contact__item">
+        <a href="mailto:telesen@telesen.ru">telesen@telesen.ru</a>
+      </li>
+    </ul>
+    <button class="dropdown-contact__small-btn btn-reset">
+      <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+        <use xlink:href="img/sprite.svg#btnPhoneArrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+        <div class="header__group-btn">
+          <div class="signal">
+  <button class="signal__btn btn-reset">
+    <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
+      <use xlink:href="img/sprite.svg#signal"></use>
+    </svg>
+  </button>
+  <div class="signal__down">
+    <p class="signal__maon-desc">
+      Реализовали новый объект
+    </p>
+    <p class="signal__desc">
+      Ввели в эксплуатацию новый проект «под ключ»
+    </p>
+    <a href="#" class="signal__link">
+      <span class="text">
+        Подробнее
+      </span>
+      <span class="svg">
+        <svg width="22" height="9" viewBox="0 0 22 9" fill="none">
+          <use xlink:href="img/sprite.svg#btnArow"></use>
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+          <div class="search">
+  <button class="search__btn btn-reset">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+  </button>
+
+  <div class="search__box">
+    <div class="search__content">
+      <form>
+        <div class="search__form">
+          <label class="search__label">
+            <input class="search__input" type="text" placeholder="Введите запрос">
+          </label>
+          <button class="search__submit btn-reset">
+            <span class="text">
+              Поиск
+            </span>
+            <span class="svg">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="img/sprite.svg#searchMobile"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+      <button class="search__close btn-reset">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <use xlink:href="img/sprite.svg#closeSearch"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</div>
+          <div class="connection">
+  <button class="connection__btn btn-reset">
+    <span class="text">
+      Связаться с нами
+    </span>
+    <span class="svg">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <use xlink:href="img/sprite.svg#connection"></use>
+      </svg>
+    </span>
+  </button>
+  <div class="connection__modal box-modal modal-type-1">
+    <div class="box-modal__window">
+      <button class="box-modal__close close btn-reset">
+        <span class="svg">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </span>
+      </button>
+      <div class="box-modal__wrapper active">
+        <div class="form-1">
+          <form class="form-1__form header-form">
+            <h3 class="form-1__title">
+              Связаться с нами
+            </h3>
+            <p class="form-1__desc">
+              Воспользуйтесь заявкой в этой форме и мы вскоре свяжемся с вами
+            </p>
+            <ul class="form-1__list list-reset">
+              <li>
+                <input class="form-1__input" name="neme" placeholder="Ваше имя" type="text">
+              </li>
+              <li>
+                <input class="form-1__input" name="company" placeholder="Компания" type="text">
+              </li>
+              <li>
+                <input class="form-1__input" name="phone" placeholder="Номер телефона" type="text">
+              </li>
+            </ul>
+            <button class="form-1__submit btn-reset">
+              <span class="text">
+                Отправить
+              </span>
+            </button>
+            <p class="form-1__desc bottom">
+              Нажимая кнопку «Отправить», вы даете согласие на <a href="#">обработку персональных данных</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="box-modal__message ">
+        <div class="box-modal__message-wrapper">
+          <h3 class="form-1__title">
+              Обращение отправлено
+            </h3>
+            <p class="form-1__desc">
+              Мы вскоре свяжемся с вами
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          <button class="burger btn-reset">
+  <span class="burger__top">
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+  <span class="burger__close">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <use xlink:href="img/sprite.svg#close"></use>
+    </svg>
+  </span>
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__container container">
+    <div class="header__line-bottom">
+      <nav class="nav">
+  <ul class="nav__list list-reset">
+    <li>
+      <a href="#">О компании</a>
+    </li>
+    <li>
+      <a href="#">Услуги</a>
+    </li>
+    <li>
+      <a href="#">Портфолио</a>
+    </li>
+    <li>
+      <a href="#">Оборудование</a>
+    </li>
+  </ul>
+</nav>
+      <div class="linkTV">
+  <a href="#" class="linkTV__link">
+    <span class="text">
+      Промышленное ТВ
+    </span>
+    <span class="svg">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <use xlink:href="img/sprite.svg#tv"></use>
+      </svg>
+    </span>
+  </a>
+</div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="section sections-main">
+  <div class="sections-main__container container">
+    
+
+      <div class="sections-main__catalog-list">
+        <ul class="sections-main__list list-reset">
+
+          <li class="card-1">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Генподрядчик
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Генподрядчик
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Выполняем полный комплекс работ: от проектирования до установки и настройки.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-2">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Мультимедиа
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Мультимедиа
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde labore optio assumenda animi eveniet cum perspiciatis consequuntur quod aut ab ipsam asperiores dignissimos perferendis, voluptates sapiente laboriosam architecto atque in.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-3">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Телевидение (Broadcast)
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Телевидение (Broadcast)
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officiis fugiat maiores eos, cum iusto nobis et fuga totam, itaque minus sunt tenetur necessitatibus asperiores sed dignissimos, vitae delectus debitis.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-4">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Аутсорсинг
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Аутсорсинг
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eveniet doloribus quod est beatae quo explicabo impedit quis officiis, aut, dicta fugit eius et veritatis sit porro adipisci ipsum dolore.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-5">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Генподрядчик
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Генподрядчик
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis perspiciatis excepturi maxime ipsum a nisi sunt iste mollitia aperiam quisquam cum, ratione placeat id at consequatur, quae repellendus fuga fugiat.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-6">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Информационные технологии (ИТ)
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Информационные технологии (ИТ)
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Выполняем полный комплекс работ: от проектирования до установки и настройки.
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-7">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Оборудование
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Оборудование
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non omnis amet eaque corrupti ratione accusantium doloribus aliquam, quibusdam, aut fuga quas dolorem illo error suscipit nemo corporis. Nihil, inventore ipsam?
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+          <li class="card-8">
+            <div class="card-sections-main">
+              <h3 class="card-sections-main__title">
+                Сервис и техобслуживание
+              </h3>
+              <!--<a href="#" class="card-sections-main__link"></a>-->
+              <div class="card-sections-main__hover-card">
+                <div class="card-sections-main__hover-card-top">
+                  <h3 class="card-sections-main__hover-card-title">
+                    Сервис и техобслуживание Сервис и техобслуживание Сервис и техобслуживание
+                  </h3>
+                  <p class="card-sections-main__desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore reprehenderit quaerat temporibus odio esse vel, architecto iure libero facere placeat. Soluta adipisci labore quo amet asperiores! Aut, eligendi assumenda! Ducimus!
+                  </p>
+                </div>
+                <a href="#" class="card-sections-main__hover-card-link">
+                  <span class="text">Подробнее</span>
+                  <span class="svg">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+                      <use xlink:href="img/sprite.svg#arrowDetailed"></use>
+                    </svg>
+                  </span>
+                </a>
+                <a href="#" class="card-sections-main__hover-card-top-link"></a>
+                <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-sections-main__hover-card-img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+  </div>
+</section>
+    <section class="sections-portfolio section">
+  <div class="sections-portfolio__container container">
+    <div class="sections-portfolio__box-swiper">
+      <div class="portfolio-box-btn">
+
+        <div class="portfolio-name">
+          <button class="portfolio-name__btn btn-reset">
+            <span class="text">
+              Генподряд
+            </span>
+            <span class="svg">
+              <svg width="13" height="7" viewBox="0 0 13 7" fill="none">
+                <use xlink:href="img/sprite.svg#arrowPortfolioName"></use>
+              </svg>
+            </span>
+          </button>
+          <div class="portfolio-name__list-wrapper">
+
+            <div class="portfolio-name-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                  <ul class="portfolio-name__list list-reset">
+                    <li>
+                      <button class="portfolio-name__item-btn btn-reset active">
+                        <span class="text">Генподряд</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="portfolio-name__item-btn btn-reset">
+                        <span class="text">Мультимедиа</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="portfolio-name__item-btn btn-reset">
+                        <span class="text">Телевидение (Broadcast)</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="portfolio-name__item-btn btn-reset">
+                        <span class="text">Аутсорсинг</span>
+                      </button>
+                    </li>
+                  </ul>
+
+
+                </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="portfolio-box-swipers">
+        <div class="portfolio-swiper-wrapper active">
+          <div class="portfolio-swiper swiper">
+            <ul class="swiper-wrapper list-reset">
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты sfseefsf aef
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="portfolio-swiper-wrapper">
+          <div class="portfolio-swiper swiper">
+            <ul class="swiper-wrapper list-reset">
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-main/1.1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-main/1.1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты sfseefsf aef
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="portfolio-swiper-wrapper">
+          <div class="portfolio-swiper swiper">
+            <ul class="swiper-wrapper list-reset">
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты sfseefsf aef
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="portfolio-swiper-wrapper">
+          <div class="portfolio-swiper swiper">
+            <ul class="swiper-wrapper list-reset">
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="swiper-slide">
+
+                <div class="card-portfolio">
+                  <picture><source srcset="img/sec-portfolio/1.webp" type="image/webp"><img class="card-portfolio__img" src="img/sec-portfolio/1.jpg" alt="img"></picture>
+                  <div class="card-portfolio__box-info">
+                    <div class="top">
+                      <h3 class="card-portfolio__title">
+                        Реализованные проекты sfseefsf aef
+                      </h3>
+                      <p class="card-portfolio__desc">
+                        Центр управления добычи нефти и газа для «Лукойл»
+                      </p>
+                      <div class="card-portfolio__box-marker">
+                        <span class="marker">
+                          Проектирование
+                        </span>
+                        <span class="marker">
+                          Центр управления
+                        </span>
+                      </div>
+                      <div class="card-portfolio__specification">
+                        <p>
+                          Центр управления добычи нефти и газа — это высокотехнологичный комплекс, где сосредоточены
+                          все системы управления и контроля за процессом добычи углеводородов.
+                        </p>
+                        <p>
+                          Современное оборудование позволяет в режиме реального времени отслеживать состояние скважин,
+                          контролировать давление, уровень жидкости и другие параметры. Центр оснащён системами
+                          визуализации, которые помогают наглядно представить текущую ситуацию на месторождении.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="middle">
+                      <img class="middle__img" src="img/sec-portfolio/mup.svg" alt="img">
+                      <p class="middle__desc">
+                        Ханты‑Мансийский автономный округ
+                      </p>
+                    </div>
+                    <div class="bottom">
+                      <a href="#" class="btn-1">
+                        <span class="text">
+                          Читать подробнее
+                        </span>
+                        <span class="svg">
+                          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+                            <use xlink:href="img/sprite.svg#arrowBtn1"></use>
+                          </svg>
+                        </span>
+                      </a>
+                      <a href="#" class="btn-2">
+                        <span class="text">
+                          Видео о проекте
+                        </span>
+                        <span class="svg">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <use xlink:href="img/sprite.svg#pleayBtn"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sections-portfolio__line-bottom">
+        <div class="btns-box">
+          <button class="btn-reset btn-swiper-2 --next">
+            <svg width="62" height="10" viewBox="0 0 62 10" fill="none">
+              <use xlink:href="img/sprite.svg#arrowBtnSwiper21"></use>
+            </svg>
+          </button>
+
+          <button class="btn-reset btn-swiper-2 --prev">
+            <svg width="62" height="10" viewBox="0 0 62 10" fill="none">
+              <use xlink:href="img/sprite.svg#arrowBtnSwiper22"></use>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="sections-portfolio__link">
+          <span>
+            Все проекты
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="sections-about section">
+  <div class="sections-about__container container">
+    <div class="sections-about__content">
+      <div class="sections-about__line-top">
+        <a class="sections-about__title-link" href="#">
+          <span>О компании</span>
+        </a>
+      </div>
+
+      <div class="sections-about__wrapper">
+        <div class="left">
+          <h1 class="main-title">
+            Многоотраслевая инженерная компания «Телесен»
+          </h1>
+          <div class="static-info">
+            <p>
+              Мы — команда профессионалов, которая готова взять на себя все задачи: от генерального проектирования до генерального подрядчика. Наша деятельность охватывает капитальный ремонт и реконструкцию объектов любой сложности, предоставляя услуги «под ключ».
+            </p>
+            <p>
+              Основные направления работы:
+            </p>
+            <ul>
+              <li>
+                Информационные технологии (IT): интеграция решений для всех сфер деятельности;
+              </li>
+              <li>
+                Индустриальный сектор: системы промышленного телевидения;
+              </li>
+              <li>
+                Broadcast: проектирование и реализация вещательных комплексов, включая аппаратно-студийные системы и мультиплексы.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="box-counter__content">
+  <ul class="box-counter__list list-reset">
+    <li>
+      <div class="card-counter">
+        <div class="counter">
+          <p class="counter__number hide">500<span>+</span></p>
+          <p class="counter__number number">0<span>+</span></p>
+          <span class="counter__desc">Построено и запущенно проектов</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-counter">
+        <div class="counter">
+          <p class="counter__number hide">2000<span>+</span></p>
+          <p class="counter__number number">0<span>+</span></p>
+          <span class="counter__desc">Заключено и реализовано контрактов</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-counter">
+        <div class="counter">
+          <p class="counter__number hide">19<span>лет</span></p>
+          <p class="counter__number number">0<span>лет</span></p>
+          <span class="counter__desc">Стабильно работаем на рынке с 2006 года</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-counter">
+        <div class="counter">
+          <p class="counter__number hide">0<span></span></p>
+          <p class="counter__number number">0<span></span></p>
+          <span class="counter__desc">Рекламаций</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+        </div>
+      </div>
+
+      <div class="sections-about__swiper-box">
+        <div class="sections-about__line-swiper-title">
+          <h3 class="sections-about__swiper-title">
+            Нам доверяют
+          </h3>
+        </div>
+
+        <div class="sections-about__swiper">
+          <div class="trust-swiper swiper">
+
+            <button class="btn-swiper-1 --next btn-reset">
+              <svg width="18" height="10" viewBox="0 0 18 10" fill="none">
+                <use xlink:href="img/sprite.svg#arrowBtnSwiper1"></use>
+              </svg>
+            </button>
+
+            <span class="trust-swiper__shadow -next"></span>
+
+            <ul class="swiper-wrapper list-reset">
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <span class="card-trust__link">
+                    <picture><source srcset="img/sec-about/1.webp" type="image/webp"><img src="img/sec-about/1.png" alt="img"></picture>
+                  </span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <a href="#" class="card-trust__link">
+                    <picture><source srcset="img/sec-about/2.webp" type="image/webp"><img src="img/sec-about/2.png" alt="img"></picture>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <a href="#" class="card-trust__link">
+                    <picture><source srcset="img/sec-about/3.webp" type="image/webp"><img src="img/sec-about/3.png" alt="img"></picture>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <a href="#" class="card-trust__link">
+                    <picture><source srcset="img/sec-about/4.webp" type="image/webp"><img src="img/sec-about/4.png" alt="img"></picture>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <a href="#" class="card-trust__link">
+                    <picture><source srcset="img/sec-about/5.webp" type="image/webp"><img src="img/sec-about/5.png" alt="img"></picture>
+                  </a>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <span class="card-trust__link">
+                    <picture><source srcset="img/sec-about/6.webp" type="image/webp"><img src="img/sec-about/6.png" alt="img"></picture>
+                  </span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <span class="card-trust__link">
+                    <picture><source srcset="img/sec-about/6.webp" type="image/webp"><img src="img/sec-about/6.png" alt="img"></picture>
+                  </span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <span class="card-trust__link">
+                    <picture><source srcset="img/sec-about/6.webp" type="image/webp"><img src="img/sec-about/6.png" alt="img"></picture>
+                  </span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card-trust">
+                  <span class="card-trust__link">
+                    <picture><source srcset="img/sec-about/6.webp" type="image/webp"><img src="img/sec-about/6.png" alt="img"></picture>
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+            <button class="btn-swiper-1 --prev btn-reset">
+              <svg width="18" height="10" viewBox="0 0 18 10" fill="none">
+                <use xlink:href="img/sprite.svg#arrowBtnSwiper2"></use>
+              </svg>
+            </button>
+
+            <span class="trust-swiper__shadow -prev"></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <div class="footer__box-logo">
+        <a class="logo" href="/">
+  <svg width="216" height="64" viewBox="0 0 216 64" fill="none">
+    <use xlink:href="img/sprite.svg#logo"></use>
+  </svg>
+</a>
+      </div>
+      <div class="down-contact address">
+  <h3 class="down-contact__title small-contacts-title">
+    Адрес
+  </h3>
+  <div class="down-contact__wrapper">
+    <ul class="down-contact__list list-reset">
+      <li class="down-contact__item">
+        <a href="https://yandex.ru/maps/org/telesen/1103255643/?ll=60.594596%2C56.824148&z=14" target="_blank">г. Екатеринбург, </a>
+      </li>
+      <li class="down-contact__item">
+        <a href="https://yandex.ru/maps/org/telesen/1103255643/?ll=60.594596%2C56.824148&z=14" target="_blank">ул. Народной воли, 25</a>
+      </li>
+    </ul>
+  </div>
+</div>
+      <div class="down-contact phone">
+  <h3 class="down-contact__title small-contacts-title">
+    Телефон
+  </h3>
+  <div class="down-contact__wrapper">
+    <ul class="down-contact__list list-reset">
+      <li class="down-contact__item">
+        <a href="tel:+7 (343) 310-29-18">+7 (343) 310-29-18</a>
+      </li>
+      <li class="down-contact__item">
+        <a href="tel:+7 (343) 310-29-28">+7 (343) 310-29-28</a>
+      </li>
+    </ul>
+  </div>
+</div>
+      <div class="down-contact email">
+  <h3 class="down-contact__title small-contacts-title">
+    Эл. адрес
+  </h3>
+  <div class="down-contact__wrapper">
+    <ul class="down-contact__list list-reset">
+      <li class="down-contact__item">
+        <a href="mailto:telesen@telesen.ru">telesen@telesen.ru</a>
+      </li>
+      <li class="down-contact__item">
+        <a href="mailto:service@telesen.ru">service@telesen.ru</a>
+      </li>
+    </ul>
+  </div>
+</div>
+      <div class="linkTV">
+  <a href="#" class="linkTV__link">
+    <span class="text">
+      Промышленное ТВ
+    </span>
+    <span class="svg">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <use xlink:href="img/sprite.svg#tv"></use>
+      </svg>
+    </span>
+  </a>
+</div>
+    </div>
+  </div>
+  <div class="footer__container container">
+    <div class="footer__line-middle">
+
+      <div class="footer__dropdown-nav dropdown-nav">
+        <button class="dropdown-nav__btn btn-reset active">
+          <span class="text">
+            О компании
+          </span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <ul class="dropdown-nav__list list-reset active">
+          <li>
+            <a href="#">Справка</a>
+          </li>
+          <li>
+            <a href="#">Презентация</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+          <li>
+            <a href="#">Вакансии</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__dropdown-nav dropdown-nav">
+        <button class="dropdown-nav__btn btn-reset">
+          <span class="text">
+            Услуги
+          </span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <ul class="dropdown-nav__list list-reset">
+          <li>
+            <a href="#">Генподрядчик</a>
+          </li>
+          <li>
+            <a href="#">Генпроектировщик</a>
+          </li>
+          <li>
+            <a href="#">Мульти медиа (AV)</a>
+          </li>
+          <li>
+            <a href="#">Разработка ПО</a>
+          </li>
+          <li>
+            <a href="#">Телевидение</a>
+          </li>
+          <li>
+            <a href="#">Инфраструктура</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--
+      <div class="footer__dropdown-nav dropdown-nav">
+        <button class="dropdown-nav__btn btn-reset">
+          <span class="text">
+            Объекты
+          </span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <ul class="dropdown-nav__list list-reset">
+          <li>
+            <a href="#">Под ключ</a>
+          </li>
+          <li>
+            <a href="#">Проектирование</a>
+          </li>
+          <li>
+            <a href="#">Интеграция</a>
+          </li>
+        </ul>
+      </div>
+      -->
+
+      <div class="footer__dropdown-nav dropdown-nav">
+        <button class="dropdown-nav__btn btn-reset">
+          <span class="text">
+            Портфолио
+          </span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <ul class="dropdown-nav__list list-reset">
+          <li>
+            <a href="#">Капитальное строительство</a>
+          </li>
+          <li>
+            <a href="#">Многофункциональные объекты</a>
+          </li>
+          <li>
+            <a href="#">Аутсорс</a>
+          </li>
+          <li>
+            <a href="#">Сервис</a>
+          </li>
+          <li>
+            <a href="#">Реестр</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__dropdown-nav dropdown-nav">
+        <button class="dropdown-nav__btn btn-reset">
+          <span class="text">
+            Оборудование
+          </span>
+          <span class="svg">
+            <svg width="8" height="4" viewBox="0 0 8 4" fill="none">
+              <use xlink:href="img/sprite.svg#dropdownNav"></use>
+            </svg>
+          </span>
+        </button>
+        <ul class="dropdown-nav__list list-reset">
+          <li>
+            <a href="#">Телевидение</a>
+          </li>
+          <li>
+            <a href="#">Звук</a>
+          </li>
+          <li>
+            <a href="#">Визуализация</a>
+          </li>
+          <li>
+            <a href="#">Коммутация</a>
+          </li>
+          <li>
+            <a href="#">Конгресс-системы</a>
+          </li>
+          <li>
+            <a href="#">Управление</a>
+          </li>
+          <li>
+            <a href="#">Безопасность</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer__container container">  
+    <div class="footer__line-bottom">
+      <div class="footer__info-desc">
+        <p>© 2025 Все права защищены (ООО «ТЕЛЕСЕН»)</p>
+        <a href="#">Политика в области обработки персональных данных</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+</body>
+</html>

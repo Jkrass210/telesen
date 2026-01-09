@@ -1,0 +1,211 @@
+.search {
+  display: flex;
+  //position: relative;
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-blue);
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    background-color: var(--bgBtn);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--dark-blue);
+      color: var(--white);
+    }
+    &.active {
+      & + .search__box {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+    }
+  }
+  &__box {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-120%);
+    position: absolute;
+    inset: 12px 0 0 0;
+    background-color: var(--white);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: opacity 0.4s ease-in-out, z-index 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+  }
+  &__content {
+    width: calc(977 / 1280 * 100%);
+    padding-right: calc(127 / 1280 * 100%);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: end;
+    form {
+      width: 100%;
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+  &__label {
+    width: 100%;
+  }
+  &__label {
+    background-repeat: no-repeat;
+    background-position: center left 16px;
+    background-image: url(../img/search/search.svg);
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid var(--gray-100);
+    border-right: 0;
+    background-color: transparent;
+    padding: 15px 16px 15px 48px;
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    &::placeholder {
+      color: var(--black)
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+  &__submit {
+    min-width: 156px;
+    padding: 16px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    .svg {
+      display: none;
+    }
+  }
+  &__close {
+    height: 100%;
+    height: 54px;
+    width: 54px;
+    min-width: 52px;
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    transition: border-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      border-color: var(--blue);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .search {
+    order: 1;
+    &__btn {
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+    }
+    &__box {
+      inset: 0 0 0 0;
+    }
+    &__content {
+      width: calc(660 / 976 * 100%);
+      padding-right: 0;
+      gap: 5px;
+    }
+    &__input {
+      padding: 13px 13px 13px 48px;
+    }
+    &__submit {
+      padding: 14px;
+    }
+    &__close {
+      width: 48px;
+      min-width: 48px;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .search {
+    &__box {
+      z-index: 3;
+    }
+    &__content {
+      width: 100%;
+      gap: 11px;
+    }
+    &__submit {
+      min-width: 136px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .search {
+    &__btn {
+      width: 36px;
+      min-width: 36px;
+      height: 36px;
+    }
+    &__box {
+      z-index: 5;
+    }
+    &__label {
+      background-image: none;
+    }
+    &__input {
+      padding: 7.5px 16px 7.5px 16px;
+      font-size: 15px;
+    }
+    &__submit {
+      min-width: auto;
+      padding: 10px;
+      .text {
+        display: none;
+      }
+      .svg {
+        display: flex;
+      }
+    }
+    &__content {
+      gap: 8px;
+    }
+    &__close {
+      width: 36px;
+      min-width: 36px;
+      height: 38px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

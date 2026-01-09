@@ -1,0 +1,39 @@
+.box-job {
+  &__content {
+    display: flex;
+    gap: calc(28 / 1280 * 100%);
+  }
+
+  .job-left {
+    width: calc(708 / 1280 * 100%);
+  }
+
+  .job-right {
+    flex: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-job {
+    &__content {
+      gap: calc(24 / 976 * 100%);
+    }
+
+    .job-left {
+      width: calc(476 / 976 * 100%);
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .box-job {
+    &__content {
+      flex-direction: column;
+      gap: 68px;
+    }
+
+    .job-left {
+      width: 100%;
+    }
+  }
+}

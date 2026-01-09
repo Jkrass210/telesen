@@ -1,0 +1,64 @@
+.btn-swiper-1 {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  transform: translateY(-50%);
+  background-color: var(--gray-100);
+  color: var(--dark-blue);
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+
+    &+.trust-swiper__shadow {
+      opacity: 0;
+    }
+  }
+
+  &.--prev {
+    right: 0;
+  }
+
+  &.--next {
+    left: 0;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+}
+
+@media (max-width: 1100px) {
+  .btn-swiper-1 {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+
+    &.--prev {
+      right: 8px;
+    }
+
+    &.--next {
+      left: 8px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .btn-swiper-1 {
+    display: none;
+  }
+}
